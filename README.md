@@ -113,6 +113,3 @@ Si decide utilizar PostgreSQL en lugar de SQLite, asegúrese de que PostgreSQL e
 
 ¡Gracias por revisar esta documentación! Si tiene alguna pregunta o necesita ayuda adicional, no dude en ponerse en contacto.
 
-
-
-Este es el contenido en formato Markdown que puedes copiar y pegar en tu archivo `README.md` en GitHub.

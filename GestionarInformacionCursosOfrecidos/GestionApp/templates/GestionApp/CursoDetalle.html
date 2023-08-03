@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle del Curso{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Detalle del Curso</h1>
+</div>
+
+<div>
+    <p>Nombre: {{ curso.nombre }}</p>
+    <p>Descripción: {{ curso.descripcion }}</p>
+    <p>Duración semanas {{ curso.duracion_semanas }}</p>
+    <p>Fecha Inicio {{ curso.fecha_inicio }}</p>
+    <p>Precio cop {{ curso.precio }}</p>
+    <p>Docente {{ curso.docente }}</p>
+</div>
+
+<div>
+    <a href="{% url 'curso_edit' pk=curso.pk %}" class="btn btn-primary">Editar</a>
+    <a href="{% url 'curso_list' %}" class="btn btn-danger">volver</a>
+</div>
+
+{% endblock %}
+

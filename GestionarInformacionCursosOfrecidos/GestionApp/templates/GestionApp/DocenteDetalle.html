@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Detalle del Docente{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Detalle del Docente</h1>
+</div>
+
+<div>
+    <p>Nombre: {{ docente.nombre }}</p>
+    <p>Documento: {{ docente.documento }}</p>
+    <p>Correo: {{ docente.correo }}</p>
+</div>
+
+<div>
+    <a href="{% url 'docente_edit' pk=docente.pk %}" class="btn btn-primary">Editar</a>
+    <a href="{% url 'docente_list' %}" class="btn btn-danger">volver</a>
+</div>
+
+{% endblock %}
+

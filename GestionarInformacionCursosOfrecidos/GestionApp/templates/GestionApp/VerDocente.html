@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Docentes{% endblock %}
+
+{% block content %}
+<div>
+    <h1><a href="{% url 'docente_list' %}">Docentes</a></h1>
+    <p><a href="{% url 'docente_new' %}" class="btn btn-primary"><i class="bi bi-plus"></i> Crear Docente</a></p>
+
+</div>
+
+<table class="table table-striped display" id="myTable" >
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Documento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for docente in docentes %}
+        <tr>
+            <td>{{ docente.nombre }}</td>
+            <td>{{ docente.documento }}</td>
+            <td>
+                <a href="{% url 'docente_edit' pk=docente.pk %}" class="btn btn-primary">Editar</a>
+                <a href="{% url 'docente_detail' pk=docente.pk %}" class="btn btn-info">Ver Detalles</a>
+                <form method="post" action="{% url 'docente_delete' pk=docente.pk %}" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="delete_confirmation" value="1">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar a este docente?')">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable({
+            serverSide: true,
+            ajax: $('#myTable').data('url'),
+            columns: [
+                {data: 'nombre'},
+                {data: 'documento'},
+                {data: 'correo'}
+            ]
+        });
+    });
+</script>
+{% endblock %}

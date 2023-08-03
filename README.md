@@ -1,25 +1,25 @@
-\# GestionarInformacionCursosOfrecidos
+# GestionarInformacionCursosOfrecidos
 
-\## Descripción
+## Descripción
 
 Necesitamos desarrollar una aplicación web para gestionar la información de los cursos ofrecidos por Cesde. La aplicación debe permitir a los administradores agregar, editar y eliminar cursos, así como también mostrar una lista de todos los cursos disponibles. Igualmente, la aplicación debe permitir administrar los docentes que dictarán cada curso.
 
-\## Bienvenido a GestionApp
+## Bienvenido a GestionApp
 
 Esta es la página de inicio de la aplicación GestionApp.
 
-\## Proyecto de Aplicación Web para Gestión de Cursos - Documentación
+## Proyecto de Aplicación Web para Gestión de Cursos - Documentación
 
 Este repositorio contiene una aplicación web desarrollada en Django para gestionar la información de los cursos ofrecidos por Cesde. La aplicación permite a los administradores agregar, editar y eliminar cursos, así como también mostrar una lista de todos los cursos disponibles. Además, la aplicación permite administrar los docentes que dictarán cada curso.
 
-\### Instalación de Django
+### Instalación de Django
 
 Para ejecutar este proyecto, es necesario tener Python y Django instalados en su sistema. Si aún no tiene Django instalado, puede seguir los siguientes pasos:
 
 1. Asegúrese de tener Python instalado en su sistema. Puede descargar Python desde el sitio oficial: [Descargar Python](https://www.python.org/downloads/)
 1. Abra una ventana de terminal y ejecute el siguiente comando para instalar Django:
 
-\```bash
+```bash
 
 pip install django
 
@@ -53,11 +53,11 @@ DATABASES = {
 
 'ENGINE': 'django.db.backends.postgresql',
 
-'NAME': 'nombre\_de\_su\_base\_de\_datos',
+'NAME': 'nombre_de_su_base_de_datos',
 
-'USER': 'su\_usuario',
+'USER': 'su_usuario',
 
-'PASSWORD': 'su\_contraseña',
+'PASSWORD': 'su_contraseña',
 
 'HOST': 'localhost',
 

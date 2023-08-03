@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>Nombre</th>
-            <th>Duracion Semanas</th>
+            <th>Fecha inicio</th>
             <th>Docente</th>
             <th>Acciones</th>
         </tr>
@@ -22,7 +22,7 @@
         {% for curso in cursos %}
         <tr>
             <td>{{ curso.nombre }}</td>
-            <td>{{ curso.duracion_semanas }}</td>
+            <td>{{ curso.fecha_inicio }}</td>
             <td>{{ curso.docente }}</td>
             <td>
                 <a href="{% url 'curso_edit' pk=curso.pk %}" class="btn btn-primary">Editar</a>

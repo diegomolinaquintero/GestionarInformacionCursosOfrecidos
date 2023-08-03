@@ -66,7 +66,7 @@ def docente_edit(request, pk):
 @csrf_exempt
 def curso_list(request):
     if request.method == 'GET':
-        cursos = Curso.objects.all().order_by('nombre')
+        cursos = Curso.objects.all().order_by('fecha_inicio')
         return render(request, 'GestionApp/VerCursos.html', {'cursos': cursos})
 
 @csrf_exempt   
